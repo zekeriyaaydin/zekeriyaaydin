@@ -16,13 +16,13 @@ For the core logic regarding energy accounting and the smart contract architectu
 
 ## 3. Responsibility Matrix: v2 POC vs. Production
 
-| Step | Function | Owner | POC Tech Stack (Azure) | Production (AWS Pivot) |
+| Step | Function | Owner | POC Tech Stack | Production (AWS Pivot) |
 | :--- | :--- | :--- | :--- | :--- |
 | **0** | **Physical Edge** | **Zek / R&C / Grexx** | **zigbee2mqtt** (on Edge) | Managed IoT Gateway |
-| **0b** | **Data Generator** | **Zek** | **C# WebJob** | Real Community Meters |
-| **A** | **Price Oracle** | **Zek** | **C# WebJob** (Scheduled) | AWS Equivalent |
-| **1** | **MQTT Broker** | **Zek** | **HiveMQ Cloud** + **IoT Hub** | HiveMQ Cloud + IoT Core |
-| **2** | **Ingestion Service** | **Zek** | **C# WebJob** | AWS Equivalent |
+| **0b** | **Data Generator** | **Zek** | **C# On Azure** | Real Community Meters |
+| **A** | **Price Oracle** | **Zek** | **C# WebJob AZure/AWS** (Scheduled) | AWS Equivalent |
+| **1** | **MQTT Broker** | **Zek** | **HiveMQ Azure/AWS Cloud** + **IoT Hub** | HiveMQ Cloud + IoT Core |
+| **2** | **Ingestion Service** | **Zek** | **C# WebJob Azure/AWS** | AWS Equivalent |
 | **3** | **Integration Point** | **Zek (Owner) / Vlad (Consumer)** | **Postgres / TimescaleDB** | **AWS RDS (Managed)** |
 | **4** | **VPP Logic (Split)** | Vlad | Node.js (AWS Lambda) | AWS Lambda |
 | **5** | **EMS Logic (Control)** | Vlad | Node.js (AWS Lambda) | AWS Lambda  |
